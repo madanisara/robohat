@@ -147,10 +147,12 @@ class SerTestClass:
         elif _command == "5":
             self.__servo_move(90.0)
         elif _command == "6":
-            self.__servo_move(self.__limit_max)
+            self.__servo_move(135.0)
         elif _command == "7":
-            self.__topboard_running_light()
+            self.__servo_move(self.__limit_max)
         elif _command == "8":
+            self.__topboard_running_light()
+        elif _command == "9":
             self.__assembly_boards_running_light()
 
         elif _command == "l":
