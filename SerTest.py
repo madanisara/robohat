@@ -110,14 +110,15 @@ class SerTestClass:
         print("2 calibrate servos")
         print("3 read out the angles of the servos")
         print("4 move servos to " + str(self.__limit_min) + " °")
-        print("5 move servos to 20 °")
-        print("6 move servos to 45 °")
-        print("7 move servos to 60 °")
-        print("8 move servos to 90 °")
-        print("9 move servos to 135 °")
-        print("10 move servos to " + str(self.__limit_max) + " °")
-        print("11 topboard OUTPUT test ")
-        print("12 assembly boards OUTPUT test ")
+        print("5 move servos to 5 °")
+        print("6 move servos to 10 °")
+        print("7 move servos to 20 °")
+        print("8 move servos to 30 °")
+        print("9 move servos to 45 °")
+        print("10 move servos to 90 °")
+        print("11 move servos to " + str(self.__limit_max) + " °")
+        print("12 topboard OUTPUT test ")
+        print("13 assembly boards OUTPUT test ")
         print("l for led test ")
         print("v show voltages of all servo adcs")
         print("t toggle SERVO update mode between DIRECT or PERIODICALLY")
@@ -149,20 +150,22 @@ class SerTestClass:
         elif _command == "4":
             self.__servo_move(self.__limit_min)
         elif _command == "5":
-            self.__servo_move(20.0)
+            self.__servo_move(5.0)
         elif _command == "6":
-            self.__servo_move(45.0)
+            self.__servo_move(10.0)
         elif _command == "7":
-            self.__servo_move(60.0)
+            self.__servo_move(20.0)
         elif _command == "8":
-            self.__servo_move(90.0)
+            self.__servo_move(30.0)
         elif _command == "9":
-            self.__servo_move(135.0)
+            self.__servo_move(45.0)
         elif _command == "10":
-            self.__servo_move(self.__limit_max)
+            self.__servo_move(90.0)
         elif _command == "11":
-            self.__topboard_running_light()
+            self.__servo_move(self.__limit_max)
         elif _command == "12":
+            self.__topboard_running_light()
+        elif _command == "13":
             self.__assembly_boards_running_light()
 
         elif _command == "l":
